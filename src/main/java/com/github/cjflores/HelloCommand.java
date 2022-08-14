@@ -7,7 +7,7 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
 
-@Command(mixinStandardHelpOptions = true, versionProvider = SpecBasedVersionProvider.class)
+@Command(mixinStandardHelpOptions = true, versionProvider = QuarkusBasedVersionProvider.class)
 public class HelloCommand implements Runnable {
     @Option(names = {"-n", "--name"}, description = "Who will we greet?", defaultValue = "World")
     private String name;
